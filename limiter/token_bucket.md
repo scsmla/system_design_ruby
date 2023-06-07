@@ -18,7 +18,10 @@ class TokenBucketLimiter
   def forward?(token_needed=1)
     refresh_tokens
 
-    return true if @current_tokens >= token_needed
+    if @current_tokens >= token_needed
+        @current_tokens -= token_needed
+        return true
+    end
     false
   end
 
@@ -27,13 +30,13 @@ class TokenBucketLimiter
   def refresh_tokens
     current_time = Time.now
     time_elapsed = current_time - @last_refresh
-    new_tokens = @refill_rate + time_elapsed
-    @current_tokens = [new_tokens, @current_tokens].min
+    new_tokens = @refill_rate * time_elapsed
+    @current_tokens = [@current_tokens + new_tokens, @bucket_capacity].min
     @last_refresh = current_time
   end
 end
 
-limiter = TokenBucketLimiter.new(1, 1)
+limiter = TokenBucketLimiter.new(2, 2)
 
 10.times do
   if limiter.forward?
