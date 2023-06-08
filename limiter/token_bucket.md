@@ -5,7 +5,7 @@
 ![token_bucket](images/token_bucket.png)
 
 
-**Code**
+## Code
 ```ruby
 class TokenBucketLimiter
   def initialize(bucket_capacity, refill_rate)
