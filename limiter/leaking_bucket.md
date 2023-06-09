@@ -2,7 +2,7 @@
 
 **This image is good enough to describe:**
 
-![leaking_bucket](images/leaking_bucket.png)
+![leaking_bucket](../images/leaking_bucket.png)
 
 
 ## Code

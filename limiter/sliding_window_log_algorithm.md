@@ -2,7 +2,7 @@
 
 **This image is good enough to describe:**
 
-![sliding_window](images/sliding_window_log.png)
+![sliding_window](../images/sliding_window_log.png)
 
 
 ## Code

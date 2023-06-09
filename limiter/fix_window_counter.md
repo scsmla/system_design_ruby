@@ -2,7 +2,7 @@
 
 **This image is good enough to describe:**
 
-![fix_window_counter](images/fix_window_counter.png)
+![fix_window_counter](../images/fix_window_counter.png)
 
 
 ## Code

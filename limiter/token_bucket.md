@@ -2,7 +2,7 @@
 
 **This image is good enough to describe:**
 
-![token_bucket](images/token_bucket.png)
+![token_bucket](../images/token_bucket.png)
 
 
 ## Code
